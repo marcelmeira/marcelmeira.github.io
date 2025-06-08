@@ -99,6 +99,7 @@ body {
 }
 
 img.zoom-click {
+  z-index: 1;
   cursor: pointer;
 }
 
@@ -206,6 +207,7 @@ img.zoom-click {
   font-family: pixel, sans-serif;
   position: sticky;
   top: 0px;
+  z-index: 5;
 }
 .main-header .identity-container .identity-block .name {
   font-size: 2em;
