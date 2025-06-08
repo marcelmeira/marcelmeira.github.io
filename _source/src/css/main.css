@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+.roboto-font {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+@font-face {
+  font-family: pixel;
+  src: url(../assets/fonts/Minecraft.ttf);
+}
+.pixel-font {
+  font-family: pixel;
+}
+
+/* GLOBALS */
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+a[href] {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "Roboto";
+}
+
+.main-header {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+  font-family: pixel, sans-serif;
+}
+.main-header .identity-container .identity-block .name {
+  font-size: 2em;
+}
+.main-header nav ul {
+  display: flex;
+  flex-direction: row;
+}
+.main-header nav ul li {
+  display: block;
+}
+.main-header nav ul li a {
+  text-transform: lowercase;
+  color: #fff;
+  margin: 10px;
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+}
+.main-header .links-container a img {
+  height: 30px;
+  width: 30px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.main-content {
+  padding: 20px;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 30px auto;
+}
+
+.presentation {
+  display: flex;
+}
+.presentation .image {
+  max-width: 40%;
+  height: 100%;
+  max-height: 400px;
+  display: flex;
+}
+.presentation .image img {
+  width: 100%;
+  object-fit: contain;
+  object-position: right;
+}
+.presentation .about-me {
+  padding-left: 20px;
+  padding-top: 20px;
+  margin-left: 20px;
+  border-left: 2px solid black;
+}
+.presentation .about-me header {
+  font-family: pixel;
+}
+.presentation .about-me header .name {
+  font-size: 2em;
+}
+.presentation .about-me header .description, .presentation .about-me header .location {
+  color: gray;
+}
+
+.contact-section {
+  display: flex;
+  font-family: pixel;
+}
+.contact-section .center {
+  padding: 0px 30px;
+}
+.contact-section .links a {
+  display: block;
+  background-color: #474747;
+  color: #fff;
+  font-family: pixel;
+  margin-bottom: 5px;
+  padding: 20px;
+  font-size: 1.5em;
+  text-align: center;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 18px;
+  }
+  .links-container {
+    display: none;
+  }
+  .presentation {
+    flex-direction: column;
+  }
+  .presentation .image {
+    max-width: 100%;
+  }
+  .presentation .about-me {
+    padding-left: 0px;
+    margin-top: 20px;
+    border-left: none;
+    border-top: 3px solid black;
+  }
+}
+@media screen and (max-width: 640px) {
+  .identity-block {
+    font-size: 12px;
+  }
+  .navigation-container {
+    font-size: 14px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
