@@ -1,0 +1,113 @@
+.projects-grid {
+	margin: auto;
+	display: flex;
+	flex-basis: auto;
+	width: 100%;
+	flex-wrap: wrap;
+
+	.item {
+		position: relative;
+		height: 300px;
+		width: calc(100% - 20px);
+		box-shadow: 5px 5px rgba(0,0,0,0.2);
+		display: block;
+		margin: 10px;
+		background-color: #fff;
+
+		img {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			object-fit: cover;
+		}
+
+		.caption {
+			transition: all 0.3s;
+			display: block;
+			opacity: 0;
+			position: absolute;
+			width: 100%;
+			color: #fff;
+			bottom: 0px;
+			left: 0px;
+			background-color: #000000a0;
+			padding: 10px;
+			font-family: "Roboto";
+
+			.title {
+				font-weight: bold;
+				margin-bottom: 10px;
+				font-size: 1.2em;
+			}
+
+			p {
+				padding: 0;
+				margin: 0;
+			}
+		}
+
+		&:hover {
+
+			.caption {
+				opacity: 1;
+			}
+		}
+
+		@media (min-width: 800px ) {
+			width: calc(50% - 20px);
+		}
+	}
+
+
+}
+
+.project-presentation {
+
+	.cover {
+		height: 400px;
+		width: 100%;
+		background-color: #fff;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	header {
+		font-family: pixel;
+		margin-top: 50px;
+
+		.title {
+			font-size: 2.5em;
+		}
+
+		.intro {
+			font-size: 1.5em;
+			color: gray;
+		}
+	}
+
+	.text {
+		font-size: 1.2em;
+		margin-top: 20px;
+		text-align: justify;
+	}
+
+	.big-image {
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 20px;
+		width: calc(100% - 20px);
+		background-color: #fff;
+		box-shadow: 5px 5px 0px rgba(0,0,0,0.2);
+	}
+
+	.image-grid {
+		margin-top: 20px;
+		@extend .projects-grid;
+	}
+}
