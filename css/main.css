@@ -4,7 +4,7 @@
   font-optical-sizing: auto;
   font-weight: 100;
   font-style: normal;
-  font-variation-settings: "wdth" 100;
+  font-variation-settings: "width" 100;
 }
 
 @font-face {
@@ -63,6 +63,7 @@ body {
   object-position: center;
 }
 .main-header .navigation-container {
+  transition: all 0.3s;
   position: fixed;
   top: 0px;
   right: 0px;
@@ -71,6 +72,7 @@ body {
   max-width: 300px;
   background-color: rgb(20, 20, 20);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  pointer-events: all;
 }
 .main-header .navigation-container nav ul {
   margin-top: 80px;
@@ -232,6 +234,11 @@ body {
     margin-left: 0px;
     border-left: none;
     border-top: 3px solid black;
+  }
+  .main-header .navigation-container.closed {
+    opacity: 0;
+    transform: translateX(50px);
+    pointer-events: none;
   }
 }
 @media screen and (max-width: 640px) {
