@@ -128,4 +128,33 @@ body {
   text-decoration: none;
 }
 
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 18px;
+  }
+  .links-container {
+    display: none;
+  }
+  .presentation {
+    flex-direction: column;
+  }
+  .presentation .image {
+    max-width: 100%;
+  }
+  .presentation .about-me {
+    padding-left: 0px;
+    margin-top: 20px;
+    border-left: none;
+    border-top: 3px solid black;
+  }
+}
+@media screen and (max-width: 640px) {
+  .identity-block {
+    font-size: 12px;
+  }
+  .navigation-container {
+    font-size: 14px;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
