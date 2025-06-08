@@ -61,6 +61,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 20;
 }
 .zoom .close {
   height: 50px;
@@ -203,6 +204,8 @@ img.zoom-click {
   justify-content: space-between;
   padding: 0px 20px;
   font-family: pixel, sans-serif;
+  position: sticky;
+  top: 0px;
 }
 .main-header .identity-container .identity-block .name {
   font-size: 2em;
@@ -227,6 +230,7 @@ img.zoom-click {
   background-color: rgb(20, 20, 20);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   pointer-events: all;
+  z-index: 9;
 }
 .main-header .navigation-container nav ul {
   margin-top: 80px;

@@ -11,6 +11,8 @@
     justify-content: space-between;
     padding: 0px 20px;
     font-family: pixel, sans-serif;
+	position: sticky;
+	top: 0px;
 
     .identity-container {
          .identity-block {
@@ -44,6 +46,7 @@
 		background-color: rgb(20, 20, 20);
 		box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
 		pointer-events: all;
+		z-index: 9;
 
 		nav ul {
 			margin-top: 80px;
@@ -261,9 +264,6 @@
     .navigation-container {
         font-size: 14px;
     }
-}
-
-@media (max-width: 680px) {
 }
 
 @media (min-width: 801px) {
