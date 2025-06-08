@@ -26,6 +26,7 @@ img {
 
 a[href] {
     text-decoration: none;
+	color: #000;
 }
 
 a:visited {
@@ -41,4 +42,72 @@ body {
     padding: 0;
     border: 0;
     font-family: "Roboto";
+	background-color: #f7f5f5;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.wrapper {
+	max-width: 800px;
+}
+
+
+/* ZOOM */
+
+.zoom {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	background-color: rgba(0,0,0,0.9);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.close {
+		height: 50px;
+		width: 50px;
+		background-color: #000;
+		z-index: 10;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		cursor: pointer;
+
+		div {
+			transition: all 0.5s;
+			height: 5px;
+			width: 30px;
+			background-color: #fff;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+
+			&:nth-child(1) {
+				transform: translate(-50%, -50%) rotateZ(45deg);
+			}
+
+			&:nth-child(2) {
+				transform: translate(-50%, -50%) rotateZ(-45deg);
+			}
+
+			&:nth-child(3) {
+				transform: translate(-50%, 0%);
+				top: 0px;
+				opacity: 0;
+			}
+		}
+	}
+
+	&.is-closed {
+		display: none;
+	}
+}
+
+img.zoom-click {
+	cursor: pointer;
 }

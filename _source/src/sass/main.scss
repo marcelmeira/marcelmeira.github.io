@@ -1,4 +1,5 @@
 @use './globals';
+@use './projects';
 
 /* Site Layout */
 
@@ -181,7 +182,6 @@
 .contact-section {
     display: flex;
 	flex-direction: column;
-    font-family: pixel;
 	justify-content: center;
 	align-items: center;
 
@@ -267,6 +267,10 @@
 }
 
 @media (min-width: 801px) {
+	body {
+		font-size: 18px
+	}
+
 	.main-header {
 		.nav-mobile-toggle {
 			display: none;

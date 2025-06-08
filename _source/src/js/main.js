@@ -15,6 +15,41 @@ function MobileNavigation() {
 	});
 }
 
+function Zoom() {
+	const clickableImages = document.querySelectorAll('.zoom-click');
+	const zoomElt = document.querySelector('.zoom');
+	const zoomImageElt = zoomElt.querySelector('img');
+
+	if (zoomElt == null || zoomImageElt == null) {
+		console.error("Zoom function not enabled");
+		return;
+	}
+
+	const closeZoom = () => {
+		zoomElt.classList.add("is-closed");
+	}
+
+	zoomElt.querySelector(".close").addEventListener('click', () => {
+		closeZoom();
+	});
+
+	document.addEventListener('keydown', function(event) {
+		if (event.key === 'Escape') {
+			closeZoom();
+		}
+	});
+
+	if (clickableImages.length > 0) {
+		clickableImages.forEach( x => {
+			x.addEventListener('click', () => {
+				zoomImageElt.src = x.src;
+				zoomElt.classList.remove("is-closed");
+			});
+		})
+	}
+}
+
 document.addEventListener("DOMContentLoaded", () => {
 	MobileNavigation();
+	Zoom();
 });
