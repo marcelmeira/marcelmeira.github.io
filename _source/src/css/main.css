@@ -29,6 +29,10 @@ a:visited {
   color: inherit;
 }
 
+a:current {
+  color: inherit;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -36,6 +40,7 @@ body {
   font-family: "Roboto";
 }
 
+/* Site Layout */
 .main-header {
   background-color: #000;
   color: #fff;
@@ -48,26 +53,93 @@ body {
 .main-header .identity-container .identity-block .name {
   font-size: 2em;
 }
-.main-header nav ul {
-  display: flex;
-  flex-direction: row;
-}
-.main-header nav ul li {
-  display: block;
-}
-.main-header nav ul li a {
-  text-transform: lowercase;
-  color: #fff;
-  margin: 10px;
-  padding: 10px;
-  display: block;
-  text-decoration: none;
+.main-header .links-container a {
+  margin-left: 10px;
 }
 .main-header .links-container a img {
   height: 30px;
   width: 30px;
   object-fit: contain;
   object-position: center;
+}
+.main-header .navigation-container {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  width: 100%;
+  max-width: 300px;
+  background-color: rgb(20, 20, 20);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.main-header .navigation-container nav ul {
+  margin-top: 80px;
+  padding: 0px;
+  display: block;
+}
+.main-header .navigation-container nav ul li {
+  display: block;
+}
+.main-header .navigation-container nav ul li a {
+  text-transform: lowercase;
+  color: #fff;
+  height: 40px;
+  margin: 10px;
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-header .navigation-container nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.main-header .nav-mobile-toggle {
+  height: 50px;
+  width: 50px;
+  background-color: #000;
+  margin: 20px 0px;
+  z-index: 10;
+  position: relative;
+  cursor: pointer;
+}
+.main-header .nav-mobile-toggle div {
+  transition: all 0.5s;
+  height: 5px;
+  width: 30px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main-header .nav-mobile-toggle div:nth-child(1) {
+  top: calc(50% - 10px);
+}
+.main-header .nav-mobile-toggle div:nth-child(3) {
+  top: calc(50% + 10px);
+}
+.main-header .nav-mobile-toggle.close div {
+  transition: all 0.5s;
+  height: 5px;
+  width: 30px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main-header .nav-mobile-toggle.close div:nth-child(1) {
+  transform: translate(-50%, -50%) rotateZ(45deg);
+}
+.main-header .nav-mobile-toggle.close div:nth-child(2) {
+  transform: translate(-50%, -50%) rotateZ(-45deg);
+}
+.main-header .nav-mobile-toggle.close div:nth-child(3) {
+  transform: translate(-50%, 0%);
+  top: 0px;
+  opacity: 0;
 }
 
 .main-content {
@@ -111,10 +183,23 @@ body {
 
 .contact-section {
   display: flex;
+  flex-direction: column;
   font-family: pixel;
+  justify-content: center;
+  align-items: center;
+}
+.contact-section .image {
+  width: 100%;
+  height: 400px;
+}
+.contact-section .image img {
+  object-position: center;
+  object-fit: contain;
+  width: 100%;
 }
 .contact-section .center {
   padding: 0px 30px;
+  max-width: 500px;
 }
 .contact-section .links a {
   display: block;
@@ -144,6 +229,7 @@ body {
   .presentation .about-me {
     padding-left: 0px;
     margin-top: 20px;
+    margin-left: 0px;
     border-left: none;
     border-top: 3px solid black;
   }
@@ -154,6 +240,37 @@ body {
   }
   .navigation-container {
     font-size: 14px;
+  }
+}
+@media (min-width: 801px) {
+  .main-header .nav-mobile-toggle {
+    display: none;
+  }
+  .main-header .navigation-container {
+    display: block;
+    position: static;
+    background-color: transparent;
+  }
+  .main-header .navigation-container nav ul {
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+  }
+  .main-header .navigation-container nav ul li {
+    display: block;
+  }
+  .main-header .navigation-container nav ul li a {
+    text-transform: lowercase;
+    color: #fff;
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+  }
+  .contact-section {
+    flex-direction: row;
   }
 }
 
