@@ -104,6 +104,10 @@
 		width: calc(100% - 20px);
 		background-color: #fff;
 		box-shadow: 5px 5px 0px rgba(0,0,0,0.2);
+
+		img {
+			width: 100%;
+		}
 	}
 
 	.image-grid {
