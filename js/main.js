@@ -49,7 +49,17 @@ function Zoom() {
 	}
 }
 
+function Links() {
+	document.querySelectorAll("a[href]").forEach( x => {
+		console.log(x.href, window.location.href)
+		if (x.href == window.location.href) {
+			x.classList.add("active");
+		}
+	});
+}
+
 document.addEventListener("DOMContentLoaded", () => {
 	MobileNavigation();
 	Zoom();
+	Links();
 });
