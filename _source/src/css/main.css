@@ -11,8 +11,16 @@
   font-family: pixel;
   src: url(../assets/fonts/Minecraft.ttf);
 }
+@font-face {
+  font-family: finalfantasy;
+  src: url(../assets/fonts/OPTIEngeEtienne.otf);
+}
 .pixel-font {
   font-family: pixel;
+}
+
+.final-fantasy-font {
+  font-family: finalfantasy;
 }
 
 /* GLOBALS */
@@ -192,6 +200,9 @@ img.zoom-click {
   background-color: #fff;
   box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2);
 }
+.project-presentation .big-image img {
+  width: 100%;
+}
 .project-presentation .image-grid {
   margin-top: 20px;
 }
@@ -210,7 +221,8 @@ img.zoom-click {
   z-index: 5;
 }
 .main-header .identity-container .identity-block .name {
-  font-size: 2em;
+  font-size: 1.7em;
+  text-transform: uppercase;
 }
 .main-header .links-container a {
   margin-left: 10px;
@@ -253,9 +265,30 @@ img.zoom-click {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+.main-header .navigation-container nav ul li a::before {
+  width: 30px;
+  height: 30px;
+  content: "";
+  display: block;
+  position: absolute;
+  left: -25px;
+  top: calc(50% - 15px);
+  pointer-events: none;
+  background-image: url("/assets/hand_cursor.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+.main-header .navigation-container nav ul li a:active::before {
+  opacity: 1;
 }
 .main-header .navigation-container nav ul li a:hover {
   background-color: rgba(255, 255, 255, 0.1);
+}
+.main-header .navigation-container nav ul li a:hover::before {
+  opacity: 1;
 }
 .main-header .nav-mobile-toggle {
   height: 50px;

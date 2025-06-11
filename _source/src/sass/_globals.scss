@@ -13,8 +13,17 @@
   src: url(../assets/fonts/Minecraft.ttf);
 }
 
+@font-face {
+	font-family: finalfantasy;
+	src: url(../assets/fonts/OPTIEngeEtienne.otf);
+}
+
 .pixel-font {
     font-family: pixel;
+}
+
+.final-fantasy-font {
+	font-family: finalfantasy;
 }
 
 /* GLOBALS */

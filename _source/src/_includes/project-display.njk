@@ -1,0 +1,20 @@
+---
+layout: 'base.njk'
+---
+
+<div class="project-presentation">
+	{% if cover %}
+	<div class="cover">
+		<img src="{{ cover }}" alt="">
+	</div>
+	{% endif %}
+
+    {% if showHeader == true %}
+	<header>
+        <div class="title">{{ title }}</div>
+		<div class="intro">{{ description }}</div>
+	</header>
+    {% endif %}
+
+	{{ content | safe }}
+</div>
